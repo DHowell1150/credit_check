@@ -13,12 +13,9 @@ RSpec.describe CreditCard do
   end
 
   it 'checks #last_four and #is_valid?' do
-  credit_card = CreditCard.new("5541808923795240", 15000)
+    credit_card = CreditCard.new("5541808923795240", 15000)
   
-  credit_card.last_four
-  credit_card.is_valid?
-
-  expect(credit_card.last_four).to eq("5240")
-  expect(credit_card.is_valid?).to eq("The number #{credit_card.card_number} is valid!")
+    expect(credit_card.last_four).to eq("5240")
+    expect(credit_card.is_valid?).to eq("The number #{credit_card.card_number} is valid!")
   end
 end
